@@ -4,13 +4,13 @@
 
 Tripvibe consists of the following services and applications:
 
-- UI (angular, nginx) - https://github.com/rossbrigoli/tripvibe
-- Submit API (quarkus java) - https://github.com/eformat/tv-submit
-- Routes API (quarkus java) - https://github.com/eformat/sc-routes
-- Query API (quarkus java) - https://github.com/eformat/tv-query
+- UI (angular, nginx) - https://github.com/tripvibe/tripvibe
+- Submit API (quarkus java) - https://github.com/tripvibe/tv-submit
+- Routes API (quarkus java) - https://github.com/tripvibe/sc-routes
+- Query API (quarkus java) - https://github.com/tripvibe/tv-query
 - Cache - https://infinispan.org
 - Kafka Cluster - https://strimzi.io
-- Kafka Streams - https://github.com/eformat/tv-streams
+- Kafka Streams - https://github.com/tripvibe/tv-streams
 - Streaming Data Warehouse - https://materialize.io
 
 ## OpenShift Deployment
@@ -18,6 +18,12 @@ Tripvibe consists of the following services and applications:
 Note: this describes process for images tagged version :latest in quay.io
 
 See version 1.0 of this document for previous versions.
+
+### Tekton, Helm3, ArgoCD
+
+Build and Deploy Tripvibe using Tekton, Helm3, ArgoCD
+
+See the docs [here](https://github.com/tripvibe/tv-ci-cd)
 
 ### Jenkins
 
