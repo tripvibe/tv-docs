@@ -50,15 +50,15 @@ oc new-project tripvibe
 
 Deploy Kafka cluster, tv-submit, materlialize
 ```bash
-oc create -f https://raw.githubusercontent.com/eformat/tv-submit/master/ocp/openshift-deployment.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/tv-submit/master/ocp/openshift-deployment.yaml
 ```
 
 Deploy Infinispan cluster, Infinispan 1.1.2 (stable) operator, infinispan 10.1.7.Final, deployed in namespace scope
 ```bash
-oc create -f https://raw.githubusercontent.com/eformat/sc-routes/master/ocp/infinispan-operatorgroup.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/sc-routes/master/ocp/infinispan-operatorgroup.yaml
 oc patch og sc-routes-dev --type='json' -p='[{"op": "replace", "path": "/spec/targetNamespaces", "value":["tripvibe"]}]'
-oc create -f https://raw.githubusercontent.com/eformat/sc-routes/master/ocp/infinispan-subscription.yaml
-oc create -f https://raw.githubusercontent.com/eformat/sc-routes/master/ocp/infinispan-cr.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/sc-routes/master/ocp/infinispan-subscription.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/sc-routes/master/ocp/infinispan-cr.yaml
 ```
 
 Wait for `infinispan-0` pod to start
@@ -84,17 +84,17 @@ EOF
 
 Deploy sc-routes
 ```bash
-oc create -f https://raw.githubusercontent.com/eformat/sc-routes/master/ocp/openshift-deployment.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/sc-routes/master/ocp/openshift-deployment.yaml
 ```
 
 Deploy tv-streams
 ```bash
-oc create -f https://raw.githubusercontent.com/eformat/tv-streams/master/ocp/openshift-deployment.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/tv-streams/master/ocp/openshift-deployment.yaml
 ```
 
 Deploy tv-query
 ```bash
-oc create -f https://raw.githubusercontent.com/eformat/tv-query/master/ocp/openshift-deployment.yaml
+oc create -f https://raw.githubusercontent.com/tripvibe/tv-query/master/ocp/openshift-deployment.yaml
 ```
 
 Deploy tripvibe
